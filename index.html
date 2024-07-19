@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <title>My weather application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Margarine&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            class="search-input"
+            id="search-city"
+            required
+          />
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="search-button"
+          />
+        </form>
+      </header>
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p class="current-details">
+              <span class="current-date" id="current-date"> Saturday 15:32</span
+              >, moderate rain <br />
+              Humidity:
+              <span class="humidity-percentage"><strong>87%</strong></span>
+              <span>, Wind:</span>
+              <span class="wind-speed"><strong>7.2km/h</strong></span>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span class="current-temperature-icon">☀️</span>
+            <span
+              class="current-temperature-temperature"
+              id="current-temperature-temperature"
+              >14</span
+            >
+            <span class="current-temperature-degree">°C</span>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p class="footer-details">
+          This project was coded by
+          <a href="#" target="_blank">Marypaz Flores</a> and is
+          <a href="#" target="_blank"> on GitHub</a> and
+          <a href="#" target="_blank">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
+    <script src="JS/javascript.js"></script>
+  </body>
+</html>
