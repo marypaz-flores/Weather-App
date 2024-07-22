@@ -104,13 +104,15 @@ form {
 }
 
 .weather-forecast-icon {
-  font-size: 38px;
-  text-align: center;
+  width: 38px;
+  height: 38px;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-forecast-temperatures {
+  text-align: center;
   color: #072ac8;
-  font-size: 16px;
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -121,8 +123,8 @@ form {
 }
 
 .footer-details {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 0px;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
 }
