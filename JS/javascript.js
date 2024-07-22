@@ -5,8 +5,16 @@ function getWeather(response) {
   );
   let cityTemperature = Math.round(response.data.temperature.current);
   let city = document.querySelector("#current-city");
+  let description = document.querySelector("#weather-despcripton");
+  let humidity = document.querySelector("#humidity-percentage");
+  let wind = document.querySelector("#wind-speed");
+  let DateTime = document.querySelector("#current-date");
 
+  DateTime.innerHTML = actualDate(new Date());
   city.innerHTML = response.data.city;
+  description.innerHTML = response.data.condition.description;
+  humidity.innerHTML = `${response.data.temperature.humidity}%`;
+  wind.innerHTML = `${response.data.wind.speed} km/h`;
   temperatureElement.innerHTML = Math.round(cityTemperature);
 }
 
@@ -62,6 +70,3 @@ function actualDate() {
 
   return formatDate;
 }
-
-let DateTime = document.querySelector("#current-date");
-DateTime.innerHTML = actualDate(new Date());
