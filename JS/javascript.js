@@ -44,7 +44,6 @@ searchButton.addEventListener("click", handleButtonSubmit);
 
 //When the page is run by the first time and no city has been searched so far we'll going to display a default city information
 searchCity("Mexico City");
-displayForecast();
 
 //Function to get the actual date and time for the main screen
 function actualDate() {
@@ -106,7 +105,7 @@ function displayForecast(response) {
         forecastHtml +
         `<div class="weather-forecast-day">
           <div class="weather-forecast-date">${formatDay(day.time)}</div>
-          <img src="${day.condition.icon_url} class="weather-forecast-icon"/>
+          <img src="${day.condition.icon_url}" class="weather-forecast-icon"/>
           <div class="weather-forecast-temperatures">
             <div class="weather-forecast-temperature">
               <strong>${Math.round(day.temperature.maximum)}°</strong>
