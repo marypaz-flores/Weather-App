@@ -9,6 +9,7 @@ function getWeather(response) {
   let humidity = document.querySelector("#humidity-percentage");
   let wind = document.querySelector("#wind-speed");
   let DateTime = document.querySelector("#current-date");
+  let icon = document.querySelector("#icon");
 
   DateTime.innerHTML = actualDate(new Date());
   city.innerHTML = response.data.city;
@@ -16,6 +17,7 @@ function getWeather(response) {
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
   wind.innerHTML = `${response.data.wind.speed} km/h`;
   temperatureElement.innerHTML = Math.round(cityTemperature);
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon"/>`;
 }
 
 //Function to search the city
@@ -38,7 +40,7 @@ let searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", handleButtonSubmit);
 
 //When the page is run by the first time and no city has been searched so far we'll going to display a default city information
-searchCity("Mexico");
+searchCity("Mexico City");
 
 //Function to get the actual date and time for the main screen
 function actualDate() {

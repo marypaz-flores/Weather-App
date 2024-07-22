@@ -61,6 +61,7 @@ form {
 }
 
 .current-temperature {
+  display: flex;
   font-size: 90px;
   margin: 0 auto;
   padding-top: 5px;
@@ -69,17 +70,15 @@ form {
 
 .current-temperature-degree {
   font-size: 35px;
-  position: relative;
-  margin-left: -25px;
-  top: -40px;
+  padding-top: 15px;
 }
 
 .current-temperature-icon {
   font-size: 90px;
   position: relative;
   padding: 0px;
-  margin-right: -30px;
-  top: 20px;
+  margin-right: -5px;
+  top: 10px;
 }
 
 .current-details {
